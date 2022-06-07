@@ -3,24 +3,47 @@ const { request } = require('express');
 const express = require('express');
 //allows you to easily use express methods
 const app = express();
+//allows server to use local file.
+const cors = require('cors');
 const PORT = 8000;
-
+app.use(cors())
 const cats = {
-    '21 savage': {
-        'age': 29,
-        'birthName': 'Sheyaa Bin Abraham-Joseph',
-        'birthLocation': 'London, England'
+    1: {
+        'name': 'Toby',
+        'age': 'Adult',
+        'dateOfBirth': 'unknown',
+        'sex': 'Female'      
     },
-    'chance the cat':{
-        'age': 29,
-        'birthName': 'Chancelor Bennett',
-        'birthLocation': 'Chicago, Illinois'
+    2:{
+        'name': 'Nell',
+        'age': 'Kitten',
+        'dateOfBirth': '2022-04-13',
+        'sex': 'Female'      
     },
-    'unknown':{
-        'age': 0,
-        'birthName': 'unknown',
-        'birthLocation': 'unknown'
-    }
+    3:{
+        'name': 'Edison',
+        'age': 'Kitten',
+        'dateOfBirth': '2022-04-13',
+        'sex': 'Male'      
+    },
+    4:{
+        'name': 'Raymond',
+        'age': 'Kitten',
+        'dateOfBirth': '2022-04-13',
+        'sex': 'Male'      
+    },
+    5:{
+        'name': 'Harry',
+        'age': 'Kitten',
+        'dateOfBirth': '2022-04-13',
+        'sex': 'Male'      
+    },
+    6:{
+        'name': 'Blanche',
+        'age': 'Kitten',
+        'dateOfBirth': '2022-04-13',
+        'sex': 'Female'      
+    },
 }
 
 app.get('/', (req,res)=>{
